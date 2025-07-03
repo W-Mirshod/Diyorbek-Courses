@@ -10,13 +10,44 @@
             margin: 0;
             padding: 0;
             font-family: 'Montserrat', Arial, sans-serif;
-            background: linear-gradient(120deg, #232526, #414345);
+            background: linear-gradient(120deg, #1c1c1c, #2c2c2c);
             color: #fff;
             min-height: 100vh;
         }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 32px;
+            background: rgba(30, 30, 30, 0.95);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #f7b731;
+            text-transform: uppercase;
+        }
+        .navbar .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+        .navbar .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .navbar .nav-links a:hover {
+            color: #f7b731;
+        }
         .container {
-            max-width: 500px;
-            margin: 80px auto;
+            max-width: 600px;
+            margin: 100px auto;
             background: rgba(30, 30, 30, 0.95);
             border-radius: 18px;
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -24,12 +55,12 @@
             text-align: center;
         }
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 10px;
             letter-spacing: 1px;
         }
         .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: #f7b731;
             margin-bottom: 28px;
         }
@@ -59,13 +90,26 @@
             box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.15);
         }
         .card-title {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: #f7b731;
             margin-bottom: 10px;
         }
         .card-desc {
             font-size: 1rem;
             color: #e0e0e0;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        footer a {
+            color: #f7b731;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
         @media (max-width: 600px) {
             .container {
@@ -74,10 +118,23 @@
             h1 {
                 font-size: 2rem;
             }
+            .navbar {
+                flex-direction: column;
+                gap: 12px;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <div class="logo">Diyorbek</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Courses</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
     <div class="container">
         <h1>Diyorbek Qurbonov</h1>
         <div class="subtitle">Unlock Your Potential. Dominate Your Life.</div>
@@ -89,9 +146,11 @@
         </div>
         <a href="#" class="cta-btn">Start Your Journey</a>
         <div style="margin-top:32px;">
-            <div style="font-size:1.05rem; margin-bottom:8px;">Contact: <a href="tel:+998912465200" style="color:#f7b731;text-decoration:none;">+998 91 246 52 00</a></div>
-            <div style="font-size:1.05rem;">Telegram: <a href="https://t.me/sufferMF" target="_blank" style="color:#f7b731;text-decoration:none;">@sufferMF</a></div>
+            <div style="font-size:1.05rem; margin-bottom:8px;">Contact: <a href="tel:+998912465200" style="color:#f7b731;text-decoration:none;">911</a></div>
         </div>
     </div>
+    <footer>
+        © 2023 Diyorbek Qurbonov. All rights reserved. <a href="#">Privacy Policy</a>
+    </footer>
 </body>
 </html>
