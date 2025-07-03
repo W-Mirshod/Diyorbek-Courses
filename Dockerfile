@@ -1,5 +1,3 @@
-FROM python:3.11-slim
-WORKDIR /app
-COPY . /app
-EXPOSE 2002
-CMD ["python3", "server.py"]
+FROM nginx:alpine
+COPY home.html /usr/share/nginx/html/index.html
+EXPOSE 80
